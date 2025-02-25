@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar{
+            background-color : black;
+            border-radius : 30px;
+           /* box-sizing : border-box; */
+           width : 960px;
+        }
+        .navbar ul {
+            overflow: auto;
+        }   
+        .navbar li {
+            /* display : inline; */
+            float : left;
+            list-style: none;
+            margin : 13px 20px;
+           /* box-sizing : border-box; */
+            
+            
+        }    
+           
+        .navbar li a {
+            padding : 3px 3px;
+            text-decoration : None;
+            color: white;
+            /* box-sizing : border-box; */
+           
+           
+        }    
+        .navbar li a:hover {
+            color : rgb(192, 188, 188);
+        } 
+        .search {
+            float : right;
+            color : red;
+            padding : 12px 75px;
+           /* box-sizing : border-box; */
+
+            /* display : inline; */
+        }   
+        .navbar input{
+            border: 2px solid black;
+            border-radius : 14px;
+            padding : 3px 17px;
+            width : 129px;
+           /* box-sizing : border-box; */
+
+            /* display : inline; */
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class = "navbar">
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li><a href="#">About</a> </li>
+            <li><a href="#">Service</a> </li>
+            <li><a href="#">Help</a> </li>
+            <li><a href="#">Contact us</a> </li>
+            <div class="search">
+                <input type="text"name= "search"id ="search"placeholder= "Search this website">
+            </div>
+
+        </ul>
+    </nav>
+    </header>
+    <!-- <p>
+      <h2>Click here for  <a href="https://www.google.com"target="=_blank">Google</a></h2> 
+    </p> -->
+</body>
+</html>
