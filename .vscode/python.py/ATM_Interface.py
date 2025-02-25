@@ -1,6 +1,8 @@
 #                MY ATM INTERFACE
 print("WELCOME TO MY ATM INTERFACE")
 print("For Intialising the Interface, you've to set your PIN")
+history = []
+
 def set_pin():
     pin = input("Please enter your PIN (6-Digits) : ")
     if(len(pin)==6 and pin.isdigit()):  #Checking if the PIN entered by user is of 6-digits or not contain any characters
@@ -18,7 +20,8 @@ while True :
     print("2. Withdraw Money")
     print("3. Deposit Money")
     print("4. Change PIN")
-    print("5. EXIT")
+    print("5. Transaction History")
+    print("6. EXIT")
     
     choice = int(input("Enter your Choice : ")) #Asking user to enter their choice
     if(choice == 1):
@@ -33,6 +36,8 @@ while True :
                 print(f"Amount ₹{withdraw} Withdrawl")
                 amount = amount-withdraw
                 print(f"Your remaining balance is : ₹{amount}")
+                history.append(f"Withdrawl : {withdraw}, Balance : {amount} ")
+
             else : 
                 print("You've Entered Wrong PIN")
         else : 
@@ -47,6 +52,7 @@ while True :
             print(f"Amount ₹{deposit} Deposited")
             amount = amount+deposit
             print(f"Your remaining balance is : ₹{amount} ")
+            history.append(f"Deposited : {deposit}, Balance : {amount} ")
 
         else : 
             print("You've Entered Wrong PIN")
@@ -60,7 +66,16 @@ while True :
         else : 
             print("You've Entered Wrong PIN, unable to change")
 
-    elif(choice == 5):
+    elif(choice==5) :
+        print("\nTransaction History :\n")
+        if not history :
+            print("No Transactions yet")
+        else : 
+            for transaction in history:
+                print(transaction)
+
+
+    elif(choice == 6):
         print("THANK YOU")
         exit() #Exiting if the user choose to end the program
 
